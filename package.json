@@ -1,0 +1,17 @@
+{
+  "name": "angularjs_helloworld",
+  "version": "1.0.0",
+  "description": "Angular test app",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "karma": "^0.11.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "http-server -o"
+  },
+  "author": "Ricardo Jaramillo",
+  "license": "ISC"
+}
