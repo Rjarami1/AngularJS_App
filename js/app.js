@@ -2,25 +2,21 @@
 
 /* App Module */
 
-var helloWorldApp = angular.module('helloWorldApp', [
+var blogApp = angular.module('blogApp', [
     'ngRoute',     
-    'helloWorldControllers'
-    
+    'blogControllers'
 ]);
 
 
-helloWorldApp.config(['$routeProvider', '$locationProvider',
+blogApp.config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider) {
         $routeProvider.
                 when('/', {
                     templateUrl: 'templates/main.html',
-                    controller: 'MainCtrl'
-                }).when('/show', {
-                    templateUrl: 'templates/show.html',
-                    controller: 'ShowCtrl'
-                }).when('/customer', {
-                    templateUrl: 'templates/customer.html',
-                    controller: 'customerCtrl'
+                    controller: 'BlogCtrl'
+                }).when('/blogPost/:id', {
+                    templateUrl: 'templates/blogPost.html',
+                    controller: 'BlogViewCtrl'
                 });
 
         $locationProvider.html5Mode(false).hashPrefix('!');

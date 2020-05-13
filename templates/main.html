@@ -1,1 +1,23 @@
-<div>{{message}}</div>
+
+<div ng-include src="'templates/menu.html'"></div>
+
+<div class="container" id="container">
+	<div class="blog-post-label">Blog Posts</div>
+	<div class="post-wrapper">
+		<div ng-repeat="blogPost in blogList">
+			<div class="blog-post-outer">
+				<div class="blog-intro-text">
+					Posted: {{blogPost.date | date:'dd/MM/yyyy @ h:mma'}}
+				</div>
+
+				<div class="blog-intro-text">
+					{{blogPost.introText}}
+				</div>
+
+				<div class="blog-read-more">
+					<a href="#!blogPost/{{blogPost._id}}">Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
