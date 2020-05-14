@@ -10,7 +10,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "test",
-    "start": "http-server -o"
+    "start": "http-server -o --cors='*'"
   },
   "author": "Ricardo Jaramillo",
   "license": "ISC"
